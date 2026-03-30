@@ -104,7 +104,7 @@ const PartnerPage: React.FC = () => {
               <div className="benefit-icon">💰</div>
               <div>
                 <h3>$10 per subscriber</h3>
-                <p>Earn $10 for every user who subscribes through your referral code. That's 50% revenue share — one of the highest in the industry.</p>
+                <p>We don't do "affiliate commissions" — we do real partnerships. 50/50 split, and we eat all the fees so you get your full cut. Simple.</p>
               </div>
             </div>
 
@@ -128,15 +128,7 @@ const PartnerPage: React.FC = () => {
               <div className="benefit-icon">💸</div>
               <div>
                 <h3>Monthly payouts</h3>
-                <p>Get paid via PayPal, Venmo, or Zelle. Request payouts anytime your balance hits $10.</p>
-              </div>
-            </div>
-
-            <div className="benefit-card">
-              <div className="benefit-icon">🚀</div>
-              <div>
-                <h3>Growing market</h3>
-                <p>The "what's in my food" movement is exploding. Health-conscious consumers are actively looking for tools like PassaroMangia.</p>
+                <p>Get paid via PayPal. Request payouts anytime your balance hits $10.</p>
               </div>
             </div>
 
