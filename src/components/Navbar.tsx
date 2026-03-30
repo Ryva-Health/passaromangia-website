@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
       <div className="navbar__inner">
-        <a href="#" className="navbar__logo">
+        <a href="/" className="navbar__logo">
           <span className="navbar__logo-icon">PM</span>
           PassaroMangia
         </a>
