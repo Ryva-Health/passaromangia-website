@@ -14,6 +14,7 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
+import PartnerPage from './components/PartnerPage';
 
 function HomePage() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/partners" element={<PartnerPage />} />
         </Routes>
         <Footer />
       </div>
