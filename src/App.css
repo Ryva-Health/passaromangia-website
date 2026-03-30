@@ -1433,3 +1433,168 @@
 .legal-page strong {
   color: var(--color-text);
 }
+
+/* ===== Differentiator Section ===== */
+.differentiator {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #f0fdf4 0%, var(--color-bg) 100%);
+}
+
+.diff-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.diff-card--featured {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.diff-card__content {
+  flex: 1;
+}
+
+.diff-card__badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: rgba(16, 185, 129, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.diff-card__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.diff-card__desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin: 0 0 16px;
+}
+
+.diff-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.diff-card__list li {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  padding: 6px 0;
+  font-weight: 500;
+}
+
+.diff-card__phone {
+  flex-shrink: 0;
+}
+
+/* Comparison table */
+.diff-comparison {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.diff-comparison__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.diff-comparison__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.diff-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1.5fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.diff-row--header {
+  border-bottom: 2px solid #e5e5e5;
+  padding-bottom: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-light);
+}
+
+.diff-row__label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.diff-row__them {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.diff-row__us {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .diff-card--featured {
+    flex-direction: column;
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .diff-card__list {
+    text-align: left;
+  }
+  .diff-card__title {
+    font-size: 1.5rem;
+  }
+  .diff-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 12px 0;
+  }
+  .diff-row--header {
+    display: none;
+  }
+  .diff-row__them::before {
+    content: "Others: ";
+    font-weight: 600;
+    color: #bbb;
+  }
+  .diff-row__us::before {
+    content: "Us: ";
+    font-weight: 600;
+  }
+  .diff-comparison {
+    padding: 24px 16px;
+  }
+}

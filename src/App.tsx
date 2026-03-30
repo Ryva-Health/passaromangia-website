@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AIShowcase from './components/AIShowcase';
+import Differentiator from './components/Differentiator';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Stats from './components/Stats';
@@ -19,6 +20,7 @@ function HomePage() {
     <>
       <Hero />
       <AIShowcase />
+      <Differentiator />
       <Features />
       <HowItWorks />
       <Stats />
