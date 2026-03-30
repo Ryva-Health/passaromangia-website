@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="footer__inner">
         <div className="footer__top">
           <div className="footer__brand">
-            <span className="navbar__logo-icon">PM</span>
+            <img src="/app-icon.png" alt="PassaroMangia" className="navbar__logo-img" />
             <span className="footer__brand-name">PassaroMangia</span>
             <p className="footer__tagline">Making healthy eating effortless with AI.</p>
           </div>
