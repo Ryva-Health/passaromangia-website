@@ -10,6 +10,7 @@ const PartnerPage: React.FC = () => {
     followers: '',
     message: '',
   });
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
@@ -230,7 +231,24 @@ const PartnerPage: React.FC = () => {
                   />
                 </div>
 
-                <button type="submit" className="btn btn--primary btn--lg pf-submit" disabled={submitting}>
+                <div className="pf-agreement">
+                  <label className="pf-checkbox-label">
+                    <input
+                      type="checkbox"
+                      checked={agreedToTerms}
+                      onChange={(e) => setAgreedToTerms(e.target.checked)}
+                      className="pf-checkbox"
+                    />
+                    <span>
+                      I agree to the{' '}
+                      <a href="/partner-terms" target="_blank" rel="noopener noreferrer">
+                        Partner Program Agreement
+                      </a>
+                    </span>
+                  </label>
+                </div>
+
+                <button type="submit" className="btn btn--primary btn--lg pf-submit" disabled={submitting || !agreedToTerms}>
                   {submitting ? 'Submitting...' : 'Submit Application'}
                 </button>
               </form>

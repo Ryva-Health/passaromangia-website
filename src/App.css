@@ -1826,3 +1826,31 @@
     flex-wrap: wrap;
   }
 }
+
+.pf-agreement {
+  margin: 16px 0 8px;
+}
+
+.pf-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.pf-checkbox {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.pf-checkbox-label a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  font-weight: 600;
+}

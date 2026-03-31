@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import PartnerPage from './components/PartnerPage';
+import PartnerTerms from './components/PartnerTerms';
 
 function HomePage() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/partners" element={<PartnerPage />} />
+          <Route path="/partner-terms" element={<PartnerTerms />} />
         </Routes>
         <Footer />
       </div>
