@@ -32,7 +32,9 @@ const PartnerTerms: React.FC = () => {
         <h2>3. Payment</h2>
         <p>
           Payouts are processed via PayPal. Partners must maintain valid payment information in their 
-          partner portal. Minimum payout threshold is $10.00. PassaroMangia reserves the right to 
+          partner portal. Minimum payout threshold is $10.00. PassaroMangia shall process approved 
+          payout requests within sixty (60) days of the request date, though most payouts are 
+          typically processed within five (5) business days. PassaroMangia reserves the right to 
           withhold payment if fraud, abuse, or violation of this Agreement is suspected.
         </p>
 
