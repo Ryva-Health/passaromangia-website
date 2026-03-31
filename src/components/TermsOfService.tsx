@@ -9,13 +9,13 @@ const TermsOfService: React.FC = () => {
 
         <h2>Agreement to Terms</h2>
         <p>
-          By downloading, installing, or using PassaroMangia ("the app"), you agree to be bound by these 
+          By downloading, installing, or using Ryva ("the app"), a product of Passaro Technologies LLC,, you agree to be bound by these 
           Terms of Service. If you do not agree, do not use the app.
         </p>
 
         <h2>Description of Service</h2>
         <p>
-          PassaroMangia is a food health scanning and nutrition analysis app. It provides:
+          Ryva is a food health scanning and nutrition analysis app. It provides:
         </p>
         <ul>
           <li>Barcode scanning with health scoring and ingredient analysis</li>
@@ -29,7 +29,7 @@ const TermsOfService: React.FC = () => {
 
         <h2>Disclaimer — Not Medical Advice</h2>
         <p>
-          <strong>PassaroMangia is not a medical device and does not provide medical advice.</strong> The 
+          <strong>Ryva is not a medical device and does not provide medical advice.</strong> The 
           health scores, nutrition analysis, AI recommendations, and all other information provided by the 
           app are for informational and educational purposes only.
         </p>
@@ -46,7 +46,7 @@ const TermsOfService: React.FC = () => {
 
         <h2>Allergy Disclaimer</h2>
         <p>
-          <strong>Do not rely on PassaroMangia for allergy safety.</strong> While we display allergen 
+          <strong>Do not rely on Ryva for allergy safety.</strong> While we display allergen 
           information from product databases, this data may be incomplete or inaccurate. Cross-contamination 
           risks are not tracked. If you have food allergies, always read the physical product label and 
           contact the manufacturer directly.
@@ -54,7 +54,7 @@ const TermsOfService: React.FC = () => {
 
         <h2>AI-Generated Content</h2>
         <p>
-          PassaroMangia uses artificial intelligence (powered by OpenAI) to generate nutrition advice, 
+          Ryva uses artificial intelligence (powered by OpenAI) to generate nutrition advice, 
           menu analysis, and shopping suggestions. AI-generated content may contain errors, inaccuracies, 
           or outdated information. It should be treated as a helpful starting point, not as authoritative 
           nutritional guidance.
@@ -77,7 +77,7 @@ const TermsOfService: React.FC = () => {
 
         <h2>Subscriptions</h2>
         <p>
-          PassaroMangia offers premium features through auto-renewable subscriptions. Subscription details:
+          Ryva offers premium features through auto-renewable subscriptions. Subscription details:
         </p>
         <ul>
           <li>Payment is charged to your Apple ID account at confirmation of purchase</li>
@@ -99,7 +99,7 @@ const TermsOfService: React.FC = () => {
 
         <h2>Limitation of Liability</h2>
         <p>
-          To the maximum extent permitted by law, PassaroMangia and its developers shall not be liable for 
+          To the maximum extent permitted by law, Ryva and its developers shall not be liable for 
           any indirect, incidental, special, consequential, or punitive damages resulting from your use of 
           or inability to use the app. This includes, but is not limited to, damages arising from:
         </p>
@@ -113,7 +113,7 @@ const TermsOfService: React.FC = () => {
 
         <h2>Intellectual Property</h2>
         <p>
-          PassaroMangia, its design, code, and original content are the property of the developers. 
+          Ryva, its design, code, and original content are the property of the developers. 
           Product data is sourced from Open Food Facts under the Open Database License (ODbL).
         </p>
 
@@ -132,7 +132,7 @@ const TermsOfService: React.FC = () => {
         <h2>Contact</h2>
         <p>
           For questions about these terms, contact us at{' '}
-          <a href="mailto:legal@passaromangia.com">legal@passaromangia.com</a>.
+          <a href="mailto:legal@ryva.com">legal@ryva.com</a>.
         </p>
       </div>
     </div>

@@ -12,7 +12,7 @@ const Differentiator: React.FC = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="section-badge">Why PassaroMangia</span>
+          <span className="section-badge">Why Ryva</span>
           <h2 className="section-title">The only food app that actually knows you</h2>
           <p className="section-subtitle">
             Other apps give everyone the same generic advice. Ours reads your bloodwork.
@@ -67,12 +67,12 @@ const Differentiator: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <h3 className="diff-comparison__title">Other apps vs PassaroMangia</h3>
+            <h3 className="diff-comparison__title">Other apps vs Ryva</h3>
             <div className="diff-comparison__grid">
               <div className="diff-row diff-row--header">
                 <span></span>
                 <span className="diff-row__them">Other Apps</span>
-                <span className="diff-row__us">PassaroMangia</span>
+                <span className="diff-row__us">Ryva</span>
               </div>
               <div className="diff-row">
                 <span className="diff-row__label">Health scoring</span>

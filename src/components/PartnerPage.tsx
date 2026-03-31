@@ -65,7 +65,7 @@ const PartnerPage: React.FC = () => {
           >
             <span style={{ fontSize: '4rem' }}>🎉</span>
             <h1>Application Received!</h1>
-            <p>Thanks for your interest in partnering with PassaroMangia. We'll review your application and get back to you within 48 hours.</p>
+            <p>Thanks for your interest in partnering with Ryva. We'll review your application and get back to you within 48 hours.</p>
             <a href="/" className="btn btn--primary btn--lg" style={{ marginTop: '24px', display: 'inline-block', textDecoration: 'none' }}>
               Back to Home
             </a>
@@ -87,7 +87,7 @@ const PartnerPage: React.FC = () => {
           <span className="section-badge">Partner Program</span>
           <h1 className="partner-hero__title">Earn $10 for every subscriber you refer</h1>
           <p className="partner-hero__subtitle">
-            Join the PassaroMangia partner program. Share your unique code with your audience, 
+            Join the Ryva partner program. Share your unique code with your audience, 
             and earn recurring revenue for every user who subscribes.
           </p>
         </motion.div>
@@ -222,7 +222,7 @@ const PartnerPage: React.FC = () => {
                 </div>
 
                 <div className="pf-group">
-                  <label>Why do you want to partner with PassaroMangia?</label>
+                  <label>Why do you want to partner with Ryva?</label>
                   <textarea
                     value={formData.message}
                     onChange={(e) => update('message', e.target.value)}

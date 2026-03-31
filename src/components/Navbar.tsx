@@ -27,8 +27,8 @@ const Navbar: React.FC = () => {
     >
       <div className="navbar__inner">
         <a href="/" className="navbar__logo">
-          <img src="/app-icon.png" alt="PassaroMangia" className="navbar__logo-img" />
-          PassaroMangia
+          <img src="/app-icon.png" alt="Ryva" className="navbar__logo-img" />
+          Ryva
         </a>
         <div className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
           {links.map((link) => (

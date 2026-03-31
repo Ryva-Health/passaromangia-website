@@ -19,7 +19,7 @@ const Stats: React.FC = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="section-badge">Why PassaroMangia</span>
+          <span className="section-badge">Why Ryva</span>
           <h2 className="section-title">Trusted by health-conscious shoppers</h2>
         </motion.div>
         <div className="stats__grid">

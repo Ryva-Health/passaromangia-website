@@ -15,7 +15,7 @@ const CTA: React.FC = () => {
           <div className="cta-card__glow" />
           <h2 className="cta-card__title">Ready to eat smarter?</h2>
           <p className="cta-card__text">
-            Download PassaroMangia and start making informed food choices today.
+            Download Ryva and start making informed food choices today.
             Your body will thank you.
           </p>
           <a href="https://apps.apple.com" className="btn btn--primary btn--lg">

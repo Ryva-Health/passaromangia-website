@@ -9,7 +9,7 @@ const PrivacyPolicy: React.FC = () => {
 
         <h2>Overview</h2>
         <p>
-          PassaroMangia ("we", "our", "the app") is committed to protecting your privacy.
+          Ryva ("we", "our", "the app"), a product of Passaro Technologies LLC, is committed to protecting your privacy.
           This policy explains what data we collect, how we use it, and your rights regarding that data.
         </p>
 
@@ -73,21 +73,21 @@ const PrivacyPolicy: React.FC = () => {
 
         <h2>Apple Health Data</h2>
         <p>
-          If you grant HealthKit permissions, PassaroMangia writes nutrition data (calories, macronutrients) 
+          If you grant HealthKit permissions, Ryva writes nutrition data (calories, macronutrients) 
           to Apple Health when you log meals. This data is governed by Apple's HealthKit privacy requirements. 
           We never use health data for advertising or share it with third parties.
         </p>
 
         <h2>Camera Usage</h2>
         <p>
-          PassaroMangia uses your camera to scan barcodes and photograph restaurant menus. Camera data is 
+          Ryva uses your camera to scan barcodes and photograph restaurant menus. Camera data is 
           processed on-device. Menu photos are processed locally using Apple's Vision framework for text 
           extraction. We do not store or transmit camera images.
         </p>
 
         <h2>Children's Privacy</h2>
         <p>
-          PassaroMangia is not directed at children under 13. We do not knowingly collect data from children.
+          Ryva is not directed at children under 13. We do not knowingly collect data from children.
         </p>
 
         <h2>Data Deletion</h2>
@@ -109,7 +109,7 @@ const PrivacyPolicy: React.FC = () => {
         <h2>Contact</h2>
         <p>
           If you have questions about this privacy policy, contact us at{' '}
-          <a href="mailto:privacy@passaromangia.com">privacy@passaromangia.com</a>.
+          <a href="mailto:privacy@ryva.com">privacy@ryva.com</a>.
         </p>
       </div>
     </div>

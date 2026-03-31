@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: 'Sarah M.',
     role: 'Wellness Coach',
-    text: "PassaroMangia completely changed how I shop. I had no idea how many hidden additives were in my 'healthy' snacks. Now I scan everything!",
+    text: "Ryva completely changed how I shop. I had no idea how many hidden additives were in my 'healthy' snacks. Now I scan everything!",
     rating: 5,
     color: '#10B981',
   },
@@ -40,7 +40,7 @@ const testimonials = [
   {
     name: 'Tom W.',
     role: 'Health-Conscious Shopper',
-    text: "I've been using PassaroMangia for a month and my grocery cart is completely transformed. Healthier choices without spending hours researching.",
+    text: "I've been using Ryva for a month and my grocery cart is completely transformed. Healthier choices without spending hours researching.",
     rating: 5,
     color: '#10B981',
   },
@@ -60,7 +60,7 @@ const Testimonials: React.FC = () => {
           <span className="section-badge">Testimonials</span>
           <h2 className="section-title">What our users say</h2>
           <p className="section-subtitle">
-            Join thousands who are already eating smarter with PassaroMangia.
+            Join thousands who are already eating smarter with Ryva.
           </p>
         </motion.div>
         <div className="testimonials__grid">

@@ -4,9 +4,9 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 const faqs = [
   {
-    question: 'Is PassaroMangia free?',
+    question: 'Is Ryva free?',
     answer:
-      'PassaroMangia offers a generous free tier that includes barcode scanning and basic health scores. Premium features like the AI Health Coach, Menu Scanner, and Instacart integration are available with a subscription.',
+      'Ryva offers a generous free tier that includes barcode scanning and basic health scores. Premium features like the AI Health Coach, Menu Scanner, and Instacart integration are available with a subscription.',
   },
   {
     question: 'How does the health scoring work?',
@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'Does it work with any barcode?',
     answer:
-      'PassaroMangia supports UPC and EAN barcodes found on most packaged food products worldwide. Our database covers millions of products and is constantly growing. If a product isn\'t found, you can submit it and we\'ll add it within 24 hours.',
+      'Ryva supports UPC and EAN barcodes found on most packaged food products worldwide. Our database covers millions of products and is constantly growing. If a product isn\'t found, you can submit it and we\'ll add it within 24 hours.',
   },
 ];
 

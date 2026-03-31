@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
             <div className="screenshot-phone__notch" />
             <img
               src="/screenshots/scan-result.png"
-              alt="PassaroMangia scanning a product barcode"
+              alt="Ryva scanning a product barcode"
               className="screenshot-phone__screen"
             />
           </div>
