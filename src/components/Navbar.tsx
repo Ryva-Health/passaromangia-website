@@ -12,9 +12,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const links = [
-    { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'FAQ', href: '#faq' },
+    { label: 'Features', href: '/#features' },
+    { label: 'How It Works', href: '/#how-it-works' },
+    { label: 'FAQ', href: '/#faq' },
     { label: 'Partners', href: '/partners' },
   ];
 
