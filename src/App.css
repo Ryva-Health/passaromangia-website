@@ -1578,24 +1578,40 @@
     font-size: 1.5rem;
   }
   .diff-row {
-    grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 12px 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 14px 0;
   }
   .diff-row--header {
     display: none;
   }
-  .diff-row__them::before {
-    content: "Others: ";
-    font-weight: 600;
-    color: #bbb;
+  .diff-row__label {
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+    margin-bottom: 2px;
   }
-  .diff-row__us::before {
-    content: "Us: ";
-    font-weight: 600;
+  .diff-row__them {
+    font-size: 0.82rem;
+    padding: 8px 10px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    text-align: center;
+    color: #999;
+  }
+  .diff-row__us {
+    font-size: 0.82rem;
+    padding: 8px 10px;
+    background: #ecfdf5;
+    border-radius: 8px;
+    text-align: center;
   }
   .diff-comparison {
-    padding: 24px 16px;
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+  .diff-comparison__title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
   }
 }
 
