@@ -132,7 +132,7 @@ const TermsOfService: React.FC = () => {
         <h2>Contact</h2>
         <p>
           For questions about these terms, contact us at{' '}
-          <a href="mailto:legal@ryva.com">legal@ryva.com</a>.
+          <a href="mailto:support@ryva.health">support@ryva.health</a>.
         </p>
       </div>
     </div>

@@ -81,7 +81,7 @@ const PrivacyPolicy: React.FC = () => {
         </p>
         <p>
           You may request deletion of your application data by contacting us at{' '}
-          <a href="mailto:privacy@ryva.com">privacy@ryva.com</a>.
+          <a href="mailto:support@ryva.health">support@ryva.health</a>.
         </p>
 
         <h3>Cookies and Security</h3>
@@ -138,7 +138,7 @@ const PrivacyPolicy: React.FC = () => {
         <h2>Contact</h2>
         <p>
           If you have questions about this privacy policy, contact us at{' '}
-          <a href="mailto:privacy@ryva.com">privacy@ryva.com</a>.
+          <a href="mailto:support@ryva.health">support@ryva.health</a>.
         </p>
       </div>
     </div>
