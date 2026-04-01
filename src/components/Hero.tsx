@@ -13,7 +13,6 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          <img src="/ryva-logo-text.png" alt="Ryva" className="hero__logo" />
           <span className="hero__badge">AI-Powered Food Intelligence</span>
           <h1 className="hero__title">
             Know What You're <br />
