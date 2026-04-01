@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+interface ValidationErrors {
+  name?: string;
+  email?: string;
+  handle?: string;
+}
+
 const PartnerPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,19 +21,42 @@ const PartnerPage: React.FC = () => {
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
+
+  const validate = (): boolean => {
+    const errors: ValidationErrors = {};
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const handle = formData.handle.trim();
+
+    if (!name || name.length < 2 || name.length > 100) {
+      errors.name = 'Name must be between 2 and 100 characters.';
+    }
+    if (!email || !EMAIL_RE.test(email)) {
+      errors.email = 'Please enter a valid email address.';
+    }
+    if (!handle || handle.length < 3 || handle.length > 200) {
+      errors.handle = 'Social handle must be between 3 and 200 characters.';
+    }
+
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!validate()) return;
+
     setSubmitting(true);
-    
-    // Send to Supabase (partner_applications table or just email for now)
-    // For launch, we'll just show success and you'll get notified
+    setError(null);
+
     try {
-      const res = await fetch('https://gcewydvgnfcsdulmtnnn.supabase.co/rest/v1/partner_applications', {
+      const res = await fetch('https://ryva-api.passaromangia.workers.dev/api/supabase/rest/v1/partner_applications', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': 'sb_publishable_2EKGsn_G_tIsmXGWiSstGg_ZU6r1FX4',
+          'X-App-Token': 'dce205a532cacb0011ebeed9a7a11acfff487d941a243c4a23ee6513f0689dba',
           'Prefer': 'return=minimal',
         },
         body: JSON.stringify({
@@ -40,17 +71,19 @@ const PartnerPage: React.FC = () => {
       if (res.ok) {
         setSubmitted(true);
       } else {
-        // Fallback: still show success (we'll capture via other means)
-        setSubmitted(true);
+        setError('Something went wrong. Please try again.');
       }
     } catch {
-      setSubmitted(true);
+      setError('Network error. Please check your connection and try again.');
     }
     setSubmitting(false);
   };
 
   const update = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+    if (validationErrors[field as keyof ValidationErrors]) {
+      setValidationErrors(prev => ({ ...prev, [field]: undefined }));
+    }
   };
 
   if (submitted) {
@@ -87,7 +120,7 @@ const PartnerPage: React.FC = () => {
           <span className="section-badge">Partner Program</span>
           <h1 className="partner-hero__title">Earn $10 for every subscriber you refer</h1>
           <p className="partner-hero__subtitle">
-            Join the Ryva partner program. Share your unique code with your audience, 
+            Join the Ryva partner program. Share your unique code with your audience,
             and earn recurring revenue for every user who subscribes.
           </p>
         </motion.div>
@@ -100,7 +133,7 @@ const PartnerPage: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h2>Why partner with us?</h2>
-            
+
             <div className="benefit-card">
               <div className="benefit-icon">💰</div>
               <div>
@@ -164,6 +197,15 @@ const PartnerPage: React.FC = () => {
               <h2>Apply to become a partner</h2>
               <p>Fill out the form below and we'll get back to you within 48 hours.</p>
 
+              {error && (
+                <div className="pf-error-banner">
+                  <p>{error}</p>
+                  <button type="button" className="btn btn--secondary" onClick={() => setError(null)}>
+                    Try Again
+                  </button>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit}>
                 <div className="pf-group">
                   <label>Your Name *</label>
@@ -174,6 +216,7 @@ const PartnerPage: React.FC = () => {
                     placeholder="Full name"
                     required
                   />
+                  {validationErrors.name && <span className="pf-field-error">{validationErrors.name}</span>}
                 </div>
 
                 <div className="pf-group">
@@ -185,6 +228,7 @@ const PartnerPage: React.FC = () => {
                     placeholder="your@email.com"
                     required
                   />
+                  {validationErrors.email && <span className="pf-field-error">{validationErrors.email}</span>}
                 </div>
 
                 <div className="pf-group">
@@ -209,6 +253,7 @@ const PartnerPage: React.FC = () => {
                     placeholder="@yourhandle"
                     required
                   />
+                  {validationErrors.handle && <span className="pf-field-error">{validationErrors.handle}</span>}
                 </div>
 
                 <div className="pf-group">
