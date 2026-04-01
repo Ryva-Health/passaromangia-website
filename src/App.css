@@ -75,7 +75,7 @@
 }
 
 .btn--primary:hover {
-  background: #022c22;
+  background: #1B5E20;
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -178,7 +178,7 @@
 }
 
 .navbar__cta:hover {
-  background: #022c22;
+  background: #1B5E20;
   transform: translateY(-1px);
 }
 
@@ -247,7 +247,7 @@
 .hero__bg-blur--2 {
   width: 500px;
   height: 500px;
-  background: #A7F3D0;
+  background: #C8E6C9;
   bottom: -150px;
   left: -200px;
   opacity: 0.3;
@@ -268,10 +268,16 @@
   min-width: 0;
 }
 
+.hero__logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 24px;
+}
+
 .hero__badge {
   display: inline-block;
   padding: 6px 16px;
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(76, 175, 80, 0.1);
   color: var(--color-primary);
   font-size: 0.8rem;
   font-weight: 600;
@@ -279,7 +285,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 24px;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(76, 175, 80, 0.2);
 }
 
 .hero__title {
@@ -292,7 +298,7 @@
 }
 
 .hero__title--accent {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2E7D32 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -543,7 +549,7 @@
 }
 
 .pill--good {
-  background: rgba(16, 185, 129, 0.15);
+  background: rgba(76, 175, 80, 0.15);
   color: var(--color-primary-light);
 }
 
@@ -712,7 +718,7 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-primary);
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(76, 175, 80, 0.1);
   padding: 6px 14px;
   border-radius: 100px;
   margin-bottom: 20px;
@@ -940,7 +946,7 @@
   position: relative;
   text-align: center;
   padding: 80px 40px;
-  background: linear-gradient(135deg, #064E3B 0%, #065F46 50%, #047857 100%);
+  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 50%, #388E3C 100%);
   border-radius: var(--radius-xl);
   overflow: hidden;
 }
@@ -983,7 +989,7 @@
 }
 
 .cta-card .btn--primary:hover {
-  background: #f0fdf4;
+  background: #F1F8E9;
   transform: translateY(-2px);
 }
 
@@ -991,7 +997,7 @@
    FOOTER
    ============================================ */
 .footer {
-  background: #022c22;
+  background: #1B5E20;
   color: rgba(255, 255, 255, 0.7);
   padding: 64px 0 32px;
 }
@@ -1281,7 +1287,7 @@
 /* ===== AI Showcase Section ===== */
 .ai-showcase {
   padding: 100px 0;
-  background: linear-gradient(180deg, var(--color-bg) 0%, #f0fdf4 100%);
+  background: linear-gradient(180deg, var(--color-bg) 0%, #F1F8E9 100%);
 }
 
 .ai-showcase__content {
@@ -1437,7 +1443,7 @@
 /* ===== Differentiator Section ===== */
 .differentiator {
   padding: 100px 0;
-  background: linear-gradient(180deg, #f0fdf4 0%, var(--color-bg) 100%);
+  background: linear-gradient(180deg, #F1F8E9 0%, var(--color-bg) 100%);
 }
 
 .diff-grid {
@@ -1457,7 +1463,7 @@
   border-radius: 24px;
   padding: 48px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-  border: 1px solid rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(76, 175, 80, 0.15);
 }
 
 .diff-card__content {
@@ -1469,7 +1475,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-primary);
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(76, 175, 80, 0.1);
   padding: 6px 14px;
   border-radius: 20px;
   margin-bottom: 16px;
@@ -1601,7 +1607,7 @@
   .diff-row__us {
     font-size: 0.82rem;
     padding: 8px 10px;
-    background: #ecfdf5;
+    background: #E8F5E9;
     border-radius: 8px;
     text-align: center;
   }
@@ -1619,7 +1625,7 @@
 .partner-page {
   padding: 120px 24px 80px;
   min-height: 100vh;
-  background: linear-gradient(180deg, #ecfdf5 0%, var(--color-bg) 100%);
+  background: linear-gradient(180deg, #E8F5E9 0%, var(--color-bg) 100%);
 }
 
 .partner-page__container {
@@ -1859,7 +1865,7 @@
 .pricing-page {
   padding: 120px 24px 80px;
   min-height: 100vh;
-  background: linear-gradient(180deg, #ecfdf5 0%, var(--color-bg) 50%);
+  background: linear-gradient(180deg, #E8F5E9 0%, var(--color-bg) 50%);
 }
 
 .pricing-page__container {
@@ -1891,7 +1897,7 @@
 
 .pricing-card--featured {
   border-color: var(--color-primary);
-  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.15);
+  box-shadow: 0 8px 32px rgba(76, 175, 80, 0.15);
 }
 
 .pricing-card__badge {

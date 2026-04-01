@@ -46,7 +46,7 @@ const AIShowcase: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             <div className="ai-feature">
-              <div className="ai-feature__icon" style={{ background: '#10B98120', color: '#10B981' }}>
+              <div className="ai-feature__icon" style={{ background: '#4CAF5020', color: '#4CAF50' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm0 14.2a7.2 7.2 0 0 1-6-3.22c.03-1.99 4-3.08 6-3.08s5.97 1.09 6 3.08a7.2 7.2 0 0 1-6 3.22z" />
                 </svg>

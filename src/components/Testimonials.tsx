@@ -7,7 +7,7 @@ const testimonials = [
     role: 'Wellness Coach',
     text: "Ryva completely changed how I shop. I had no idea how many hidden additives were in my 'healthy' snacks. Now I scan everything!",
     rating: 5,
-    color: '#10B981',
+    color: '#4CAF50',
   },
   {
     name: 'James L.',
@@ -42,7 +42,7 @@ const testimonials = [
     role: 'Health-Conscious Shopper',
     text: "I've been using Ryva for a month and my grocery cart is completely transformed. Healthier choices without spending hours researching.",
     rating: 5,
-    color: '#10B981',
+    color: '#4CAF50',
   },
 ];
 
