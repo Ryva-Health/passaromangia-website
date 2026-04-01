@@ -21,9 +21,7 @@ const TermsOfService: React.FC = () => {
           <li>Barcode scanning with health scoring and ingredient analysis</li>
           <li>AI-powered nutrition advice and recommendations</li>
           <li>Restaurant menu scanning and analysis</li>
-          <li>Smart shopping lists with healthier alternative suggestions</li>
-          <li>Integration with third-party grocery ordering (Instacart)</li>
-          <li>Nutrition logging and tracking</li>
+<li>Nutrition logging and tracking</li>
           <li>Health document analysis</li>
         </ul>
 

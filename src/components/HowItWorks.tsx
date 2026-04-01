@@ -16,13 +16,6 @@ const steps = [
     screenshot: '/screenshots/product-score.png',
     alt: 'Product details showing health score of 75 with macro breakdown',
   },
-  {
-    number: '03',
-    title: 'Shop Healthier',
-    description: 'Get AI-powered shopping suggestions for healthier alternatives and order directly through Instacart.',
-    screenshot: '/screenshots/smart-shopping.png',
-    alt: 'Smart Shopping Lists with AI-generated healthier alternatives',
-  },
 ];
 
 const HowItWorks: React.FC = () => {
@@ -37,7 +30,7 @@ const HowItWorks: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <span className="section-badge">How It Works</span>
-          <h2 className="section-title">Three steps to healthier eating</h2>
+          <h2 className="section-title">Two steps to healthier eating</h2>
           <p className="section-subtitle">
             It takes less than 10 seconds to make a smarter food choice.
           </p>

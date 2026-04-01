@@ -95,11 +95,6 @@ const Differentiator: React.FC = () => {
                 <span className="diff-row__us">Learns & remembers over time</span>
               </div>
               <div className="diff-row">
-                <span className="diff-row__label">Shopping</span>
-                <span className="diff-row__them">Just a food score</span>
-                <span className="diff-row__us">AI shopping lists + Instacart ordering</span>
-              </div>
-              <div className="diff-row">
                 <span className="diff-row__label">Your data</span>
                 <span className="diff-row__them">Stored on their servers</span>
                 <span className="diff-row__us">100% on-device. Private by design.</span>

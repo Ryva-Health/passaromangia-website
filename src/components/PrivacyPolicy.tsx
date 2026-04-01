@@ -49,8 +49,8 @@ const PrivacyPolicy: React.FC = () => {
             </a>.
           </li>
           <li>
-            <strong>Instacart API</strong> (optional) — if you use the "Order on Instacart" feature, your 
-            shopping list items are sent to Instacart to create an order page. See{' '}
+            <strong>Instacart API (coming soon)</strong> (optional) — when available, if you use the "Order on Instacart" feature, your
+            shopping list items will be sent to Instacart to create an order page. See{' '}
             <a href="https://www.instacart.com/privacy" target="_blank" rel="noopener noreferrer">
               Instacart's privacy policy
             </a>.

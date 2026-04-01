@@ -4,8 +4,6 @@ import {
   QrCodeIcon,
   SparklesIcon,
   CameraIcon,
-  ShoppingCartIcon,
-  TruckIcon,
   BeakerIcon,
 } from '@heroicons/react/24/outline';
 
@@ -28,19 +26,7 @@ const features = [
     description: 'Photograph restaurant menus for dish-by-dish health ratings before you order.',
     color: '#8B5CF6',
   },
-  {
-    icon: ShoppingCartIcon,
-    title: 'Smart Shopping',
-    description: 'AI-generated healthier alternatives to your usual grocery buys, ranked by health score.',
-    color: '#F59E0B',
-  },
-  {
-    icon: TruckIcon,
-    title: 'Instacart Integration',
-    description: 'Order healthier groceries with one tap — seamlessly connected to Instacart delivery.',
-    color: '#EC4899',
-  },
-  {
+{
     icon: BeakerIcon,
     title: 'Additive Database',
     description: 'Know exactly what those ingredients really are — 100+ additives decoded in plain English.',
@@ -71,7 +57,7 @@ const Features: React.FC = () => {
           <span className="section-badge">Features</span>
           <h2 className="section-title">Everything you need to eat healthier</h2>
           <p className="section-subtitle">
-            Powerful tools that make healthy eating effortless, from scanning to shopping.
+            Powerful tools that make healthy living effortless, from scanning to insights.
           </p>
         </motion.div>
         <div className="features__grid">
