@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
-// TODO: Add server-side Turnstile validation in the Cloudflare Worker
+const PARTNER_APPLICATION_API = 'https://api.ryva.health/api/partner_applications';
 
 declare global {
   interface Window {
@@ -103,42 +103,67 @@ const PartnerPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validate()) return;
+    if (!validate()) {
+      setError('Please fix the highlighted fields below.');
+      return;
+    }
+    if (!agreedToTerms) {
+      setError('Please agree to the Partner Program Agreement.');
+      return;
+    }
+    if (!turnstileToken) {
+      setError('Please complete the CAPTCHA verification below.');
+      return;
+    }
 
     setSubmitting(true);
     setError(null);
 
     try {
-      const headers: Record<string, string> = {
-        'Content-Type': 'application/json',
-        // Auth via Turnstile CAPTCHA token — no app token needed for website forms
-        'Prefer': 'return=minimal',
-      };
-      if (turnstileToken) {
-        headers['X-Turnstile-Token'] = turnstileToken;
-      }
-
-      const res = await fetch('https://api.ryva.health/api/supabase/rest/v1/partner_applications', {
+      const res = await fetch(PARTNER_APPLICATION_API, {
         method: 'POST',
-        headers,
+        headers: {
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal',
+          'X-Turnstile-Token': turnstileToken,
+        },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
+          name: formData.name.trim(),
+          email: formData.email.trim(),
           platform: formData.platform,
-          handle: formData.handle,
-          follower_count: parseInt(formData.followers) || 0,
-          message: formData.message,
+          handle: formData.handle.trim(),
+          follower_count: parseInt(formData.followers, 10) || 0,
+          message: formData.message.trim(),
         }),
       });
+
       if (res.ok) {
         setSubmitted(true);
-      } else {
-        setError('Something went wrong. Please try again.');
+        return;
+      }
+
+      let message = 'Something went wrong. Please try again.';
+      try {
+        const data = await res.json();
+        if (typeof data?.error === 'string') {
+          message = data.error === 'CAPTCHA required' || data.error === 'CAPTCHA failed'
+            ? 'CAPTCHA verification failed. Please refresh and try again.'
+            : data.error;
+        }
+      } catch {
+        /* keep default message */
+      }
+      setError(message);
+
+      if (widgetIdRef.current && window.turnstile) {
+        window.turnstile.reset(widgetIdRef.current);
+        setTurnstileToken(null);
       }
     } catch {
       setError('Network error. Please check your connection and try again.');
+    } finally {
+      setSubmitting(false);
     }
-    setSubmitting(false);
   };
 
   const update = (field: string, value: string) => {
@@ -357,9 +382,18 @@ const PartnerPage: React.FC = () => {
 
                 <div ref={turnstileRef} style={{ marginBottom: '16px' }} />
 
-                <button type="submit" className="btn btn--primary btn--lg pf-submit" disabled={submitting || !agreedToTerms}>
+                <button
+                  type="submit"
+                  className="btn btn--primary btn--lg pf-submit"
+                  disabled={submitting || !agreedToTerms || !turnstileToken}
+                >
                   {submitting ? 'Submitting...' : 'Submit Application'}
                 </button>
+                {!turnstileToken && agreedToTerms && (
+                  <p className="pf-field-error" style={{ marginTop: '8px' }}>
+                    Complete the CAPTCHA above to enable submit.
+                  </p>
+                )}
               </form>
             </div>
           </motion.div>
