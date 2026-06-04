@@ -2,14 +2,17 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 const PARTNER_APPLICATION_API = 'https://api.ryva.health/api/partner_applications';
+// Must match the Turnstile widget whose secret is stored as TURNSTILE_SECRET on the worker.
+const TURNSTILE_SITE_KEY = '0x4AAAAAACyx_PXcXB2w_c1E';
 
 declare global {
   interface Window {
-    turnstile?: {
+      turnstile?: {
       render: (container: HTMLElement, options: {
         sitekey: string;
         callback: (token: string) => void;
         'expired-callback'?: () => void;
+        'error-callback'?: () => void;
       }) => string;
       reset: (widgetId: string) => void;
       remove: (widgetId: string) => void;
@@ -40,21 +43,34 @@ const PartnerPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [turnstileError, setTurnstileError] = useState<string | null>(null);
   const turnstileRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string | null>(null);
+  const errorBannerRef = useRef<HTMLDivElement>(null);
 
   const onTurnstileVerify = useCallback((token: string) => {
     setTurnstileToken(token);
+    setTurnstileError(null);
+  }, []);
+
+  const showError = useCallback((message: string) => {
+    setError(message);
+    requestAnimationFrame(() => {
+      errorBannerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
   }, []);
 
   useEffect(() => {
     const renderWidget = () => {
       if (turnstileRef.current && window.turnstile && !widgetIdRef.current) {
         widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
-          // TODO: Replace with real Turnstile site key in production
-          sitekey: '0x4AAAAAACyx_PXcXB2w_c1E',
+          sitekey: TURNSTILE_SITE_KEY,
           callback: onTurnstileVerify,
           'expired-callback': () => setTurnstileToken(null),
+          'error-callback': () => {
+            setTurnstileToken(null);
+            setTurnstileError('CAPTCHA failed to load. Please refresh the page.');
+          },
         });
       }
     };
@@ -104,15 +120,15 @@ const PartnerPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) {
-      setError('Please fix the highlighted fields below.');
+      showError('Please fix the highlighted fields below.');
       return;
     }
     if (!agreedToTerms) {
-      setError('Please agree to the Partner Program Agreement.');
+      showError('Please agree to the Partner Program Agreement.');
       return;
     }
     if (!turnstileToken) {
-      setError('Please complete the CAPTCHA verification below.');
+      showError('Please complete the CAPTCHA verification below.');
       return;
     }
 
@@ -153,14 +169,14 @@ const PartnerPage: React.FC = () => {
       } catch {
         /* keep default message */
       }
-      setError(message);
+      showError(message);
 
       if (widgetIdRef.current && window.turnstile) {
         window.turnstile.reset(widgetIdRef.current);
         setTurnstileToken(null);
       }
     } catch {
-      setError('Network error. Please check your connection and try again.');
+      showError('Network error. Please check your connection and try again.');
     } finally {
       setSubmitting(false);
     }
@@ -284,11 +300,11 @@ const PartnerPage: React.FC = () => {
               <h2>Apply to become a partner</h2>
               <p>Fill out the form below and we'll get back to you within 48 hours.</p>
 
-              {error && (
-                <div className="pf-error-banner">
-                  <p>{error}</p>
-                  <button type="button" className="btn btn--secondary" onClick={() => setError(null)}>
-                    Try Again
+              {(error || turnstileError) && (
+                <div className="pf-error-banner" ref={errorBannerRef} role="alert">
+                  <p>{error || turnstileError}</p>
+                  <button type="button" className="btn btn--secondary" onClick={() => { setError(null); setTurnstileError(null); }}>
+                    Dismiss
                   </button>
                 </div>
               )}

@@ -1821,6 +1821,30 @@
   margin-top: 8px;
 }
 
+.pf-error-banner {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  color: #991b1b;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.pf-error-banner p {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.pf-field-error {
+  display: block;
+  margin-top: 6px;
+  color: #b91c1c;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .partner-success {
   text-align: center;
   padding: 80px 0;
