@@ -5,7 +5,7 @@ const PrivacyPolicy: React.FC = () => {
     <div className="legal-page">
       <div className="legal-page__container">
         <h1>Privacy Policy</h1>
-        <p className="legal-page__updated">Last updated: April 11, 2026</p>
+        <p className="legal-page__updated">Last updated: June 6, 2026</p>
 
         <h2>Overview</h2>
         <p>
@@ -91,6 +91,21 @@ const PrivacyPolicy: React.FC = () => {
           <strong>Cookies.</strong> We use Cloudflare for security and performance, which sets essential cookies required for the proper functioning of our website (such as bot protection and threat detection). We do not use tracking cookies, advertising cookies, or third-party analytics cookies on our website.
         </p>
 
+        <h3>Product Analytics (Mobile App)</h3>
+        <p>
+          We use PostHog as our product analytics provider to understand how features of the mobile app are used so we can improve the product. The data we send to PostHog is strictly scoped:
+        </p>
+        <ul>
+          <li><strong>Anonymous device identifier.</strong> Ryva does not require an account. We use an anonymous identifier to associate events from the same device. We do not transmit your name, email, phone number, or any other identifier that we could use to contact you.</li>
+          <li><strong>Limited event taxonomy.</strong> We send a fixed, allow-listed set of event names and properties — for example, that the Scanner screen was opened, a scan was completed, or the paywall was viewed. We do <strong>not</strong> send the content of your scans, your dietary profile, food rules, AI chat messages, allergen or restriction information, biometric data, body stats, or any health information.</li>
+          <li><strong>No session replay or screen recording.</strong> PostHog's session replay and screenshot features are disabled. We do not record your screen or capture screenshots for analytics.</li>
+          <li><strong>No autocapture of UI elements.</strong> Analytics events are only the ones we explicitly send. We do not auto-capture button labels, text fields, or URLs.</li>
+          <li><strong>US data residency.</strong> Events are sent to PostHog's US cloud (us.posthog.com). PostHog is the data processor for this data.</li>
+          <li><strong>Opt-out.</strong> You can opt out of product analytics at any time in Profile. Once opted out, no further events are sent from your device. See{' '}
+            <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">PostHog's privacy policy</a>.
+          </li>
+        </ul>
+
         <h2>How We Use Your Data</h2>
         <p>
           We use the data we collect for the following purposes:
@@ -166,6 +181,7 @@ const PrivacyPolicy: React.FC = () => {
           <li><strong>Request deletion of server-side data</strong> (uploaded photos, health documents, partner application data) by contacting{' '}
             <a href="mailto:support@ryva.health">support@ryva.health</a>.</li>
           <li><strong>Revoke permissions</strong> (camera, HealthKit) in your device settings at any time.</li>
+          <li><strong>Opt out of product analytics</strong> in Profile. Once opted out, no further events are sent from your device.</li>
         </ul>
 
         <h3>Users in the European Economic Area, United Kingdom, and Switzerland</h3>
