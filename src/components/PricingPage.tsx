@@ -70,7 +70,7 @@ const PricingPage: React.FC = () => {
                 Health document upload
               </li>
             </ul>
-            <a href="https://apps.apple.com/app/ryva/id6761320113" className="btn btn--outline btn--lg pricing-card__btn">
+            <a href="https://apps.apple.com/us/app/ryva/id6761320113" className="btn btn--outline btn--lg pricing-card__btn">
               Download Free
             </a>
           </motion.div>
@@ -128,7 +128,7 @@ const PricingPage: React.FC = () => {
                 Data export (CSV/JSON)
               </li>
             </ul>
-            <a href="https://apps.apple.com/app/ryva/id6761320113" className="btn btn--primary btn--lg pricing-card__btn">
+            <a href="https://apps.apple.com/us/app/ryva/id6761320113" className="btn btn--primary btn--lg pricing-card__btn">
               Start 7-Day Free Trial
             </a>
             <p className="pricing-card__trial-note">Free trial with referral code. Cancel anytime.</p>

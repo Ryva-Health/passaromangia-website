@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
               {link.label}
             </a>
           ))}
-          <a href="#cta" className="navbar__cta" onClick={() => setMenuOpen(false)}>
+          <a href="https://apps.apple.com/us/app/ryva/id6761320113" className="navbar__cta" onClick={() => setMenuOpen(false)}>
             Download
           </a>
         </div>
