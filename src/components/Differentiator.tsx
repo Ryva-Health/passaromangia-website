@@ -51,9 +51,13 @@ const Differentiator: React.FC = () => {
               <div className="screenshot-phone">
                 <div className="screenshot-phone__notch" />
                 <img
-                  src="/screenshots/health-context.png"
+                  src="/screenshots/health-context.webp"
                   alt="Health context showing extracted biomarkers from lab results"
                   className="screenshot-phone__screen"
+                  width={800}
+                  height={1735}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

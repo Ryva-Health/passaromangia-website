@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
-const faqs = [
+export const faqs = [
   {
     question: 'Is Ryva free?',
     answer:

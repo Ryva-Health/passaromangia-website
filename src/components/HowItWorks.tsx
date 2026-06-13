@@ -7,14 +7,14 @@ const steps = [
     number: '01',
     title: 'Scan',
     description: 'Point your camera at any barcode. Instantly identify the product and see its NutriScore rating.',
-    screenshot: '/screenshots/scan-result.png',
+    screenshot: '/screenshots/scan-result.webp',
     alt: 'Scanning a Lactaid milk barcode with instant results',
   },
   {
     number: '02',
     title: 'Analyze',
     description: 'Your AI health advisor analyzes every product against your unique profile — dietary goals, allergies, and health conditions. Get a personalized score out of 100, smart ingredient warnings tailored to you, and clear reasons why a product does or doesn\'t fit your needs.',
-    screenshot: '/screenshots/product-score.png',
+    screenshot: '/screenshots/product-score.webp',
     alt: 'Product details showing health score of 75 with macro breakdown',
     aiPowered: true,
   },
@@ -67,6 +67,10 @@ const HowItWorks: React.FC = () => {
                     src={step.screenshot}
                     alt={step.alt}
                     className="screenshot-phone__screen"
+                    width={800}
+                    height={1735}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

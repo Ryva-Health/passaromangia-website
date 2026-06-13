@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
     >
       <div className="navbar__inner">
         <a href="/" className="navbar__logo">
-          <img src="/ryva-logo-icon.png" alt="Ryva" className="navbar__logo-img" />
+          <img src="/ryva-logo-icon.webp" alt="Ryva" className="navbar__logo-img" width={44} height={44} decoding="async" />
           Ryva
         </a>
         <div className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>

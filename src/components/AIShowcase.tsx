@@ -31,9 +31,13 @@ const AIShowcase: React.FC = () => {
             <div className="screenshot-phone">
               <div className="screenshot-phone__notch" />
               <img
-                src="/screenshots/ai-chat.png"
+                src="/screenshots/ai-chat.webp"
                 alt="AI Partner showing personalized nutrition knowledge"
                 className="screenshot-phone__screen"
+                width={800}
+                height={1735}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </motion.div>

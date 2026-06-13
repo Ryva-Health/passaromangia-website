@@ -54,9 +54,13 @@ const Hero: React.FC = () => {
           <div className="screenshot-phone screenshot-phone--hero">
             <div className="screenshot-phone__notch" />
             <img
-              src="/screenshots/scan-result.png"
-              alt="Ryva scanning a product barcode"
+              src="/screenshots/scan-result.webp"
+              alt="Ryva scanning a product barcode for an instant health score"
               className="screenshot-phone__screen"
+              width={800}
+              height={1735}
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
         </motion.div>

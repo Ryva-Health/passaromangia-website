@@ -8,6 +8,23 @@
   overflow-x: hidden;
 }
 
+/* Accessibility: keyboard skip link, visible only on focus */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 10px 16px;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
 .section-container {
   max-width: 1200px;
   margin: 0 auto;

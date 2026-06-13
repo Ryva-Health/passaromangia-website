@@ -12,7 +12,9 @@
       ]
     }
   ],
+  "trailingSlash": false,
   "rewrites": [
+    { "source": "/tt-media/:path*", "destination": "https://dpkvuexc7hbilvs3.public.blob.vercel-storage.com/tt-media/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "outputDirectory": "dist"
